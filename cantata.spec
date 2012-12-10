@@ -44,3 +44,10 @@ structure.
 %find_lang %name 
 
 
+
+
+%changelog
+* Fri Jul 27 2012 Alexander Khrukin <akhrukin@mandriva.org> 0.8.2-1mdv2012.0
++ Revision: 811280
+- imported package cantata
+
