@@ -8,6 +8,7 @@ Url:		https://code.google.com/p/cantata/
 Source0:	https://%{name}.googlecode.com/files/%{name}-%{version}.tar.bz2
 Patch0:		cantata-1.1.1-fix-po.patch
 BuildRequires:	cdparanoia
+BuildRequires:	cdda-devel
 BuildRequires:	kdelibs4-devel
 BuildRequires:	pkgconfig(libmtp)
 BuildRequires:	pkgconfig(libmpg123)
@@ -44,22 +45,27 @@ structure.
 %setup -q
 %patch0 -p1
 
+# Hack to fix install path for x86_64 build
+sed -i s,lib/cantata,%{_lib}/cantata,g replaygain/CMakeLists.txt
+sed -i s,lib/cantata,%{_lib}/cantata,g replaygain/albumscanner.cpp
+
 %build
 %cmake_kde4 \
+	-DENABLE_CDPARANOIA=ON \
+	-DENABLE_FFMPEG=ON \
 	-DENABLE_KDE=ON \
+	-DENABLE_MPG123=ON \
+	-DENABLE_MTP=ON \
+	-DENABLE_MUSICBRAINZ=ON \
+	-DENABLE_OVERLAYSCROLLBARS=OFF \
 	-DENABLE_PHONON=ON \
 	-DENABLE_QT5=OFF \
+	-DENABLE_SPEEXDSP=ON \
 	-DENABLE_TAGLIB=ON \
 	-DENABLE_TAGLIB_EXTRAS=ON \
-	-DENABLE_MTP=ON \
-	-DENABLE_FFMPEG=ON \
-	-DENABLE_MPG123=ON \
-	-DENABLE_SPEEXDSP=ON \
-	-DENABLE_UDISK2=OFF \
-	-DENABLE_OVERLAYSCROLLBARS=OFF
+	-DENABLE_UDISK2=OFF
 
 %make
-
 
 %install
 %makeinstall_std -C build
@@ -71,6 +77,8 @@ structure.
 - New version 1.1.1
 - Add patch to fix build with broken po files in 1.1.1
 - Update files list
+- Update build options
+- Update RuildRequires
 
 * Fri Aug 02 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 1.0.3-3
 - Add patch to fix build with ffmpeg 2.0
