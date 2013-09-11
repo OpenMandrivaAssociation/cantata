@@ -1,12 +1,13 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
 Version:	1.1.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://code.google.com/p/cantata/
 Source0:	https://%{name}.googlecode.com/files/%{name}-%{version}.tar.bz2
 Patch0:		cantata-1.1.1-fix-po.patch
+Patch2:		cantata-1.1.1-ru-po.patch
 BuildRequires:	cdparanoia
 BuildRequires:	cdda-devel
 BuildRequires:	kdelibs4-devel
@@ -44,6 +45,7 @@ structure.
 %prep
 %setup -q
 %patch0 -p1
+%patch1 -p1
 
 # Hack to fix install path for x86_64 build
 sed -i s,lib/cantata,%{_lib}/cantata,g replaygain/CMakeLists.txt
