@@ -7,7 +7,7 @@ Group:		Graphical desktop/KDE
 Url:		https://code.google.com/p/cantata/
 Source0:	https://%{name}.googlecode.com/files/%{name}-%{version}.tar.bz2
 Patch0:		cantata-1.1.1-fix-po.patch
-Patch2:		cantata-1.1.1-ru-po.patch
+Patch1:		cantata-1.1.1-ru-po.patch
 BuildRequires:	cdparanoia
 BuildRequires:	cdda-devel
 BuildRequires:	kdelibs4-devel
