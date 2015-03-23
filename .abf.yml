@@ -1,10 +1,5 @@
-removed_sources:
-  cantata-1.1.1.tar.bz2: 47bbbd3bd015553f6b09c553759d5d7110966b55
-  cantata-1.1.3.tar.bz2: 7b321abf45cd2c71e86418a41c413391ad04ff6d
-  cantata-1.3.0.1.tar.bz2: 2c72d5fa7c63cd9f9e85edf2aa24dfaa88c064fb
-  cantata-1.3.1.tar.bz2: d8435c4ca3e163849ff3fd4e0d340439ba209e49
-  cantata-1.3.1-locale.patch: 1076b21c2a4ce5f7781135c8f36cf7048dbcf190
+---
 sources:
-  cantata-1.3.3.tar.bz2: 967b7ea2eeba6036681598715c9f3a5277c57ae5
+  cantata-1.5.1.tar.bz2: 595f81a5c29e187c4ba8e6c1dde764d18d3726ee
   cantata-1.3.3-locale.patch: 7bea52b5694f29c5d466a9c5955f9e5253df99f7
   
