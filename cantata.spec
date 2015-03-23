@@ -57,7 +57,6 @@ structure.
 %prep
 %setup -q
 
-%patch0 -p1
 
 # Hack to fix install path for x86_64 build
 # TODO report upstream for a fix -done.
