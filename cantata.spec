@@ -14,6 +14,7 @@ Source0:	%{name}-%{version}.tar.bz2
 Patch0:         cantata-1.3.3-locale.patch
 BuildRequires:	cdparanoia
 BuildRequires:	cdda-devel
+BuildRequires:	cmake
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Network)
