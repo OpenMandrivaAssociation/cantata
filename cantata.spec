@@ -11,7 +11,6 @@ Url:		https://code.google.com/p/cantata/
 # New downloads (from 1.3.0 onwards) will be served from google drive.
 # No longer direct link to the source.
 Source0:	%{name}-%{version}.tar.bz2
-Patch0:         cantata-1.3.3-locale.patch
 BuildRequires:	cdparanoia
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
@@ -63,10 +62,12 @@ structure.
 # TODO report upstream for a fix -done.
 sed -i s,lib/cantata,%{_lib}/cantata,g replaygain/CMakeLists.txt
 sed -i s,lib/cantata,%{_lib}/cantata,g replaygain/albumscanner.cpp
+sed -i s,lib/cantata,%{_lib}/cantata,g tags/CMakeLists.txt
 
 
 %build
 %cmake_qt5 -DENABLE_QT5=ON -DENABLE_HTTP_STREAM_PLAYBACK=ON -DENABLE_REMOTE_DEVICES=ON
+
 %make
 
 %install
