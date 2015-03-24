@@ -64,7 +64,7 @@ structure.
 %{_libdir}/cantata/cantata-*
 %{_datadir}/applications/cantata.desktop
 %{_datadir}/cantata/config/*.xml
-%{_datadir}/cantata/icons/*.svg
+%{_datadir}/cantata/icons/*.*g
 %{_datadir}/cantata/mpd/mpd.conf.template
 %{_datadir}/cantata/scripts/cantata-*
 %{_datadir}/cantata/scripts/mount.cifs.wrapper
