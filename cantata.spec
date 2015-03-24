@@ -49,14 +49,17 @@ Qt4 application (however, note that this is not fully tested). The interface
 is very configurable - most views can be shown as either a list or tree
 structure.
 
-%files -f %{name}.lang
+%files
 %doc AUTHORS ChangeLog LICENSE README TODO
+%dir %{_datadir}/cantata/translations
 %{_kde_bindir}/%{name}
 %{_kde_applicationsdir}/%{name}.desktop
 %{_kde_appsdir}/solid/actions/cantata-play-audiocd.desktop
 %{_kde_datadir}/%{name}
 %{_kde_libdir}/%{name}
 %{_kde_iconsdir}/hicolor/*/apps/%{name}.*
+%{_datadir}/cantata/translations/cantata_*.qm
+
 #------------------------------------------------------------------------------
 
 %prep
@@ -80,6 +83,4 @@ sed -i s,lib/cantata,%{_lib}/cantata,g tags/CMakeLists.txt
 
 %install
 %makeinstall_std -C build
-
-%find_lang %{name}
 
