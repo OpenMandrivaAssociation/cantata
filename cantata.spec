@@ -1,7 +1,7 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
 Version:	1.5.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://code.google.com/p/cantata/
@@ -84,7 +84,8 @@ structure.
 sed -i s,lib/cantata,%{_lib}/cantata,g replaygain/CMakeLists.txt
 sed -i s,lib/cantata,%{_lib}/cantata,g replaygain/albumscanner.cpp
 sed -i s,lib/cantata,%{_lib}/cantata,g tags/CMakeLists.txt
-
+sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/CMakeLists.txt
+sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/com.googlecode.cantata.mounter.service.cmake
 
 %build
 %cmake_qt5 \
