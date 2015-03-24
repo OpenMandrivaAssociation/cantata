@@ -14,6 +14,7 @@ Source0:	%{name}-%{version}.tar.bz2
 BuildRequires:	cdparanoia
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
+BuildRequires:	qmake5
 BuildRequires:	cmake(Qt5Widgets)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Network)
@@ -66,7 +67,7 @@ sed -i s,lib/cantata,%{_lib}/cantata,g tags/CMakeLists.txt
 
 
 %build
-%cmake \
+%cmake_qt5 \
     -DENABLE_QT5=ON \
     -DENABLE_HTTP_STREAM_PLAYBACK=ON \
     -DENABLE_REMOTE_DEVICES=ON
