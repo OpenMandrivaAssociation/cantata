@@ -16,6 +16,8 @@ BuildRequires:	cdda-devel
 BuildRequires:	cmake
 BuildRequires:	qmake5
 BuildRequires:	cmake(Qt5Widgets)
+BuildRequires:	cmake(Qt5DBus)
+BuildRequires:	cmake(Qt5Multimedia)
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5Concurrent)
