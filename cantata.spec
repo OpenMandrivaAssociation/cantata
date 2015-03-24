@@ -66,7 +66,10 @@ sed -i s,lib/cantata,%{_lib}/cantata,g tags/CMakeLists.txt
 
 
 %build
-%cmake_qt5 -DENABLE_QT5=ON -DENABLE_HTTP_STREAM_PLAYBACK=ON -DENABLE_REMOTE_DEVICES=ON
+%cmake_qt5 \
+    -DENABLE_QT5=ON \
+    -DENABLE_HTTP_STREAM_PLAYBACK=ON \
+    -DENABLE_REMOTE_DEVICES=ON
 
 %make
 
