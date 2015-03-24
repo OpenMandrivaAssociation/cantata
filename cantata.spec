@@ -51,13 +51,26 @@ structure.
 
 %files
 %doc AUTHORS ChangeLog LICENSE README TODO
+%dir %{_libdir}/cantata
+%dir %{_datadir}/cantata
+%dir %{_datadir}/cantata/config
+%dir %{_datadir}/cantata/icons
+%dir %{_datadir}/cantata/mpd
+%dir %{_datadir}/cantata/scripts
+%dir %{_datadir}/cantata/themes
 %dir %{_datadir}/cantata/translations
-%{_kde_bindir}/%{name}
-%{_kde_applicationsdir}/%{name}.desktop
-%{_kde_appsdir}/solid/actions/cantata-play-audiocd.desktop
-%{_kde_datadir}/%{name}
-%{_kde_libdir}/%{name}
-%{_kde_iconsdir}/hicolor/*/apps/%{name}.*
+%{_sysconfdir}/dbus-1/system.d/com.googlecode.cantata.mounter.conf
+%{_bindir}/cantata
+%{_libdir}/cantata/cantata-*
+%{_datadir}/applications/cantata.desktop
+%{_datadir}/cantata/config/*.xml
+%{_datadir}/cantata/icons/*.svg
+%{_datadir}/cantata/mpd/mpd.conf.template
+%{_datadir}/cantata/scripts/cantata-*
+%{_datadir}/cantata/scripts/mount.cifs.wrapper
+%{_datadir}/cantata/themes/*.css
+%{_datadir}/dbus-1/system-services/com.googlecode.cantata.mounter.service
+%{_iconsdir}/hicolor/*/apps/%{name}.*g
 %{_datadir}/cantata/translations/cantata_*.qm
 
 #------------------------------------------------------------------------------
