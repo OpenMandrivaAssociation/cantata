@@ -1,7 +1,7 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
-Version:	1.5.1
-Release:	2
+Version:	1.5.2
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://code.google.com/p/cantata/
