@@ -81,7 +81,7 @@ structure.
 
 # Hack to fix install path for x86_64 build
 # TODO report upstream for a fix -done.
-sed -i s,LINUX_LIB_DIR lib,LINUX_LIB_DIR %{_lib},g CMakeLists.txt
+sed -i -e "s,LINUX_LIB_DIR lib,LINUX_LIB_DIR %{_lib},g" CMakeLists.txt
 sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/CMakeLists.txt
 sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/com.googlecode.cantata.mounter.service.cmake
 
