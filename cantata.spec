@@ -1,17 +1,17 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
-Version:	1.5.2
-Release:	6
+Version:	2.0.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
-Url:		https://code.google.com/p/cantata/
+Url:		https://github.com/CDrummond/cantata
 # NOTE:
 # As of January 14th 2014, google code no longer allows adding new downloads. 
 # Therefore, the google code download page has been replaced with this page. 
 # New downloads (from 1.3.0 onwards) will be served from google drive.
 # No longer direct link to the source.
-Source0:	%{name}-%{version}.tar.bz2
-BuildRequires:	cdparanoia
+Source0:	%{name}-%{version}.tar.gz
+BuildRequires:	pkgconfig(libcdio_paranoia)
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
 BuildRequires:	qmake5
@@ -38,7 +38,6 @@ BuildRequires:	pkgconfig(libcddb)
 BuildRequires:	pkgconfig(taglib-extras)
 
 Requires:	mpd
-Requires:	oxygen-icon-theme
 Suggests:	lame
 
 %description
@@ -59,17 +58,19 @@ structure.
 %dir %{_datadir}/cantata/scripts
 %dir %{_datadir}/cantata/themes
 %dir %{_datadir}/cantata/translations
-%{_sysconfdir}/dbus-1/system.d/com.googlecode.cantata.mounter.conf
+%{_sysconfdir}/dbus-1/system.d/mpd.cantata.mounter.conf
 %{_bindir}/cantata
 %{_libdir}/cantata/cantata-*
 %{_datadir}/applications/cantata.desktop
 %{_datadir}/cantata/config/*.xml
+%{_datadir}/cantata/fonts
+%{_datadir}/cantata/icons/cantata
 %{_datadir}/cantata/icons/*.*g
 %{_datadir}/cantata/mpd/mpd.conf.template
 %{_datadir}/cantata/scripts/cantata-*
 %{_datadir}/cantata/scripts/mount.cifs.wrapper
 %{_datadir}/cantata/themes/*.css
-%{_datadir}/dbus-1/system-services/com.googlecode.cantata.mounter.service
+%{_datadir}/dbus-1/system-services/mpd.cantata.mounter.service
 %{_iconsdir}/hicolor/*/apps/%{name}.*g
 %{_datadir}/cantata/translations/cantata_*.qm
 
@@ -83,7 +84,7 @@ structure.
 # TODO report upstream for a fix -done.
 sed -i -e "s,LINUX_LIB_DIR lib,LINUX_LIB_DIR %{_lib},g" CMakeLists.txt
 sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/CMakeLists.txt
-sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/com.googlecode.cantata.mounter.service.cmake
+sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/mpd.cantata.mounter.service.cmake
 
 %build
 %cmake_qt5 \
