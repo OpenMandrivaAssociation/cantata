@@ -22,6 +22,7 @@ BuildRequires:	qt5-qtmultimedia
 BuildRequires:	cmake(Qt5Xml)
 BuildRequires:	cmake(Qt5Network)
 BuildRequires:	cmake(Qt5Concurrent)
+BuildRequires:	cmake(Qt5Sql)
 BuildRequires:	cmake(Qt5Svg)
 BuildRequires:	qt5-linguist-tools
 BuildRequires:	pkgconfig(libmtp)
