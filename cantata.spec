@@ -28,6 +28,7 @@ BuildRequires:	qt5-linguist-tools
 BuildRequires:	pkgconfig(libmtp)
 BuildRequires:	pkgconfig(libmpg123)
 BuildRequires:	pkgconfig(libmusicbrainz5)
+BuildRequires:	pkgconfig(libvlc)
 BuildRequires:	pkgconfig(openssl)
 BuildRequires:	pkgconfig(speexdsp)
 BuildRequires:	pkgconfig(taglib) >= 1.6
