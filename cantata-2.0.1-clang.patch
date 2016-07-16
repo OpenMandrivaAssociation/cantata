@@ -9,3 +9,14 @@
      #endif
  }
  
+--- cantata-2.0.1/devices/musicbrainz.cpp.orig	2016-07-16 21:54:52.471055388 +0100
++++ cantata-2.0.1/devices/musicbrainz.cpp	2016-07-16 21:55:14.031054009 +0100
+@@ -248,7 +248,7 @@
+     }
+     DBUG << "Should lookup " << discId;
+ 
+-    MusicBrainz5::CQuery Query("cantata-"PACKAGE_VERSION_STRING);
++    MusicBrainz5::CQuery Query("cantata-" PACKAGE_VERSION_STRING);
+     QList<CdAlbum> m;
+     QList<QNetworkProxy> proxies=NetworkProxyFactory::self()->queryProxy(QNetworkProxyQuery(QUrl("http://musicbrainz.org")));
+     foreach (const QNetworkProxy &p, proxies) {
