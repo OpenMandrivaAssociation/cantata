@@ -1,0 +1,11 @@
+--- cantata-2.0.1/support/utils.cpp.orig	2016-07-16 17:17:57.568656211 +0100
++++ cantata-2.0.1/support/utils.cpp	2016-07-16 17:18:06.179655660 +0100
+@@ -773,7 +773,7 @@
+     #elif defined Q_OS_MAC
+     return fixPath(QCoreApplication::applicationDirPath())+app;
+     #else
+-    return QString(INSTALL_PREFIX "/"LINUX_LIB_DIR"/")+QCoreApplication::applicationName()+constDirSep+app;
++    return QString(INSTALL_PREFIX "/" LINUX_LIB_DIR "/")+QCoreApplication::applicationName()+constDirSep+app;
+     #endif
+ }
+ 

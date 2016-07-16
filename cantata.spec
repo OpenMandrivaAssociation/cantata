@@ -11,6 +11,7 @@ Url:		https://github.com/CDrummond/cantata
 # New downloads (from 1.3.0 onwards) will be served from google drive.
 # No longer direct link to the source.
 Source0:	%{name}-%{version}.tar.gz
+Patch1:		cantata-2.0.1-clang.patch
 BuildRequires:	pkgconfig(libcdio_paranoia)
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
@@ -80,7 +81,7 @@ structure.
 
 %prep
 %setup -q
-
+%apply_patches
 
 # Hack to fix install path for x86_64 build
 # TODO report upstream for a fix -done.
