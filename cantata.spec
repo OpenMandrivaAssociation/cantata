@@ -6,6 +6,7 @@ License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/CDrummond/cantata
 Source0:	https://github.com/CDrummond/cantata/releases/download/v%{version}/%{name}-%{version}.tar.bz2
+Patch1:		cantata-2.2.0-ffmpeg.patch
 BuildRequires:	pkgconfig(libcdio_paranoia)
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
