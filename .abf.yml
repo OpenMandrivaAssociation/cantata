@@ -1,4 +1,5 @@
 removed_sources:
   cantata-2.0.1.tar.gz: 810450365a262f0b52f7b9be2243c98b3517bf77
-sources:
   cantata-2.2.0.tar.bz2: e4ebd1777700cb3406725d905073dd6ea1382b4d
+sources:
+  cantata-2.3.1.tar.bz2: 5d1480b59a0de7a568698050dc5e8eb395748ee7

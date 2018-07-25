@@ -1,12 +1,11 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
-Version:	2.2.0
-Release:	2
+Version:	2.3.1
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/CDrummond/cantata
 Source0:	https://github.com/CDrummond/cantata/releases/download/v%{version}/%{name}-%{version}.tar.bz2
-Patch1:		cantata-2.2.0-ffmpeg.patch
 BuildRequires:	pkgconfig(libcdio_paranoia)
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
@@ -31,7 +30,6 @@ BuildRequires:	pkgconfig(taglib) >= 1.6
 BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	ffmpeg-devel
-BuildRequires:  pkgconfig(QJson)
 BuildRequires:	pkgconfig(libcddb)
 BuildRequires:	pkgconfig(taglib-extras)
 
@@ -50,26 +48,19 @@ structure.
 %doc AUTHORS ChangeLog LICENSE README TODO
 %dir %{_libdir}/cantata
 %dir %{_datadir}/cantata
-%dir %{_datadir}/cantata/config
 %dir %{_datadir}/cantata/icons
-%dir %{_datadir}/cantata/mpd
 %dir %{_datadir}/cantata/scripts
 %dir %{_datadir}/cantata/translations
 %{_sysconfdir}/dbus-1/system.d/mpd.cantata.mounter.conf
 %{_bindir}/cantata
 %{_libdir}/cantata/cantata-*
 %{_datadir}/applications/cantata.desktop
-%{_datadir}/cantata/config/*.xml
-%{_datadir}/cantata/fonts
-%{_datadir}/cantata/icons/cantata
 %{_datadir}/cantata/icons/*.*g
-%{_datadir}/cantata/mpd/mpd.conf.template
 %{_datadir}/cantata/scripts/cantata-*
 %{_datadir}/cantata/scripts/mount.cifs.wrapper
 %{_datadir}/dbus-1/system-services/mpd.cantata.mounter.service
 %{_iconsdir}/hicolor/*/apps/%{name}*.*g
 %{_datadir}/cantata/translations/cantata_*.qm
-%{_datadir}/cantata/translations/blank.qm
 
 #------------------------------------------------------------------------------
 
