@@ -1,6 +1,6 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
-Version:	2.3.1
+Version:	2.3.2
 Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
@@ -31,7 +31,6 @@ BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	ffmpeg-devel
 BuildRequires:	pkgconfig(libcddb)
-BuildRequires:	pkgconfig(taglib-extras)
 
 Requires:	mpd
 Suggests:	lame
@@ -51,14 +50,11 @@ structure.
 %dir %{_datadir}/cantata/icons
 %dir %{_datadir}/cantata/scripts
 %dir %{_datadir}/cantata/translations
-%{_sysconfdir}/dbus-1/system.d/mpd.cantata.mounter.conf
 %{_bindir}/cantata
 %{_libdir}/cantata/cantata-*
 %{_datadir}/applications/cantata.desktop
 %{_datadir}/cantata/icons/*.*g
 %{_datadir}/cantata/scripts/cantata-*
-%{_datadir}/cantata/scripts/mount.cifs.wrapper
-%{_datadir}/dbus-1/system-services/mpd.cantata.mounter.service
 %{_iconsdir}/hicolor/*/apps/%{name}*.*g
 %{_datadir}/cantata/translations/cantata_*.qm
 
@@ -71,12 +67,9 @@ structure.
 # Hack to fix install path for x86_64 build
 # TODO report upstream for a fix -done.
 sed -i -e "s,LINUX_LIB_DIR lib,LINUX_LIB_DIR %{_lib},g" CMakeLists.txt
-sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/CMakeLists.txt
-sed -i s,lib/cantata,%{_lib}/cantata,g devices/mounter/mpd.cantata.mounter.service.cmake
 
 %build
 %cmake_qt5 \
-    -DENABLE_QT5=ON \
     -DENABLE_HTTP_STREAM_PLAYBACK=ON \
     -DENABLE_REMOTE_DEVICES=ON
 
