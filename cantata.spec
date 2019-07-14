@@ -33,7 +33,7 @@ BuildRequires:	pkgconfig(zlib)
 BuildRequires:	ffmpeg-devel
 BuildRequires:	pkgconfig(libcddb)
 
-Requires:	pkgconfig(mpd)
+Requires:	mpd
 Suggests:	lame
 
 %description
