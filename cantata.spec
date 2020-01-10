@@ -63,7 +63,7 @@ structure.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 # Hack to fix install path for x86_64 build
 # TODO report upstream for a fix -done.
