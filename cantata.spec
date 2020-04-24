@@ -1,7 +1,7 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
 Version:	2.4.1
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/CDrummond/cantata
@@ -74,8 +74,8 @@ sed -i -e "s,LINUX_LIB_DIR lib,LINUX_LIB_DIR %{_lib},g" CMakeLists.txt
     -DENABLE_HTTP_STREAM_PLAYBACK=ON \
     -DENABLE_REMOTE_DEVICES=ON
 
-%make
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install -C build
 
