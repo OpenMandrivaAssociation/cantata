@@ -1,11 +1,12 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
 Version:	2.4.2
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/CDrummond/cantata
 Source0:	https://github.com/CDrummond/cantata/releases/download/v%{version}/%{name}-%{version}.tar.bz2
+Patch0:		cantata-ffmpeg-5.0.patch
 BuildRequires:	pkgconfig(libcdio_paranoia)
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
