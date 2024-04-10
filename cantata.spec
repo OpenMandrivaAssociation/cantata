@@ -1,12 +1,12 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
 Version:	2.5.0
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/CDrummond/cantata
 Source0:	https://github.com/CDrummond/cantata/releases/download/v%{version}/%{name}-%{version}.tar.bz2
-
+Patch1:		cantata-2.5.0-ffmpeg7.patch
 BuildRequires:	pkgconfig(libcdio_paranoia)
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
@@ -63,8 +63,7 @@ structure.
 #------------------------------------------------------------------------------
 
 %prep
-%setup -q
-%autopatch -p1
+%autosetup -p1
 
 # Hack to fix install path for x86_64 build
 # TODO report upstream for a fix -done.
