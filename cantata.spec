@@ -12,6 +12,7 @@ Source0:    https://github.com/nullobsi/cantata/archive/refs/tags/v%{version}/%{
 BuildRequires:	pkgconfig(libcdio_paranoia)
 BuildRequires:	cdda-devel
 BuildRequires:	cmake
+# Qt6
 BuildRequires:	qmake-qt6
 BuildRequires:	cmake(Qt6Widgets)
 BuildRequires:	cmake(Qt6DBus)
@@ -22,6 +23,13 @@ BuildRequires:	cmake(Qt6Concurrent)
 BuildRequires:	cmake(Qt6Sql)
 BuildRequires:	cmake(Qt6Svg)
 BuildRequires:	cmake(Qt6LinguistTools)
+BuildRequires:  qt6-qtbase-theme-gtk3
+BuildRequires:  qt6-qtbase-sql-firebird
+BuildRequires:  qt6-qtbase-sql-mariadb
+BuildRequires:  qt6-qtbase-sql-odbc
+BuildRequires:  qt6-qtbase-sql-postgresql
+BuildRequires:  qt6-qtmultimedia-gstreamer
+#
 BuildRequires:	pkgconfig(libmtp)
 BuildRequires:	pkgconfig(libmpg123)
 BuildRequires:	pkgconfig(libmusicbrainz5)
