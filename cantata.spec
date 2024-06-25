@@ -48,19 +48,13 @@ structure.
 
 %files
 %doc AUTHORS ChangeLog LICENSE README TODO
-#dir %{_libdir}/cantata
-#dir %{_datadir}/cantata
-#dir %{_datadir}/cantata/icons
-#dir %{_datadir}/cantata/scripts
-#dir %{_datadir}/cantata/translations
 %{_bindir}/cantata
-#{_libdir}/cantata/cantata-*
-#{_datadir}/applications/cantata.desktop
-#{_datadir}/cantata/icons/*.*g
-#{_datadir}/cantata/scripts/cantata-*
-#{_iconsdir}/hicolor/*/apps/%{name}*.*g
-#{_datadir}/cantata/translations/cantata_*.qm
-
+%{_datadir}/Cantata
+%{_datadir}/applications/dog.unix.cantata.Cantata.desktop
+%{_datadir}/metainfo/dog.unix.cantata.Cantata.metainfo.xml
+%{_iconsdir}/hicolor/*x*/apps/dog.unix.cantata.Cantata.png
+%{_iconsdir}/hicolor/scalable/apps/dog.unix.cantata.Cantata.svg
+%{_iconsdir}/hicolor/symbolic/apps/dog.unix.cantata.Cantata-symbolic.svg
 #------------------------------------------------------------------------------
 
 %prep
