@@ -42,6 +42,9 @@ BuildRequires:	pkgconfig(x11)
 BuildRequires:	pkgconfig(zlib)
 BuildRequires:	ffmpeg-devel
 BuildRequires:	pkgconfig(libcddb)
+BuildRequires:  pkgconfig(xkbcommon)
+BuildRequires:  pkgconfig(xkbcommon-x11)
+BuildRequires:  pkgconfig(vulkan)
 
 Requires:	mpd
 Recommends:	lame
