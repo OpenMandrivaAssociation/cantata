@@ -60,6 +60,8 @@ structure.
 %files
 %doc AUTHORS ChangeLog LICENSE README TODO
 %{_bindir}/cantata
+%{_libexecdir}/Cantata/cantata-replaygain
+%{_libexecdir}/Cantata/cantata-tags
 %{_datadir}/Cantata
 %{_datadir}/applications/dog.unix.cantata.Cantata.desktop
 %{_datadir}/metainfo/dog.unix.cantata.Cantata.metainfo.xml
