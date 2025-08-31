@@ -1,4 +1,4 @@
-%global optflags %{optflags} -Wno-error=deprecated-declarations
+%global optflags %{optflags} -Wno-error=deprecated-declarations -Wno-unused-result
 
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
