@@ -80,6 +80,7 @@ sed -i -e "s,LINUX_LIB_DIR lib,LINUX_LIB_DIR %{_lib},g" CMakeLists.txt
 %build
 %cmake \
     -DENABLE_HTTP_STREAM_PLAYBACK=ON \
+    -DWARNINGS_AS_ERRORS=OFF \
     -DENABLE_REMOTE_DEVICES=ON
 
 %make_build
