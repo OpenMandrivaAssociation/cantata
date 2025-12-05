@@ -31,6 +31,7 @@ BuildRequires:  qt6-qtbase-sql-mariadb
 BuildRequires:  qt6-qtbase-sql-odbc
 BuildRequires:  qt6-qtbase-sql-postgresql
 BuildRequires:  qt6-qtmultimedia-gstreamer
+BuildRequires:  cmake(KF6ItemViews)
 BuildRequires:  pkgconfig(libebur128)
 BuildRequires:	pkgconfig(libmtp)
 BuildRequires:	pkgconfig(libmpg123)
