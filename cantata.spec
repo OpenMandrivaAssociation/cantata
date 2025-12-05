@@ -2,8 +2,8 @@
 
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
-Version:	3.3.1
-Release:	3
+Version:	3.4.0
+Release:	1
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/CDrummond/cantata
