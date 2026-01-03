@@ -13,6 +13,7 @@ Source0:    https://github.com/nullobsi/cantata/archive/refs/tags/v%{version}/%{
 
 BuildRequires:	pkgconfig(libcdio_paranoia)
 BuildRequires:	cdda-devel
+BuildRequires:  make
 BuildRequires:	cmake
 # Qt6
 BuildRequires:	qmake-qt6
