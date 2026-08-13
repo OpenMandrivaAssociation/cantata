@@ -3,7 +3,7 @@
 Summary:	Client for the Music Player Daemon (MPD)
 Name:		cantata
 Version:	3.5.0
-Release:	4
+Release:	5
 License:	GPLv2+
 Group:		Graphical desktop/KDE
 Url:		https://github.com/CDrummond/cantata
@@ -33,6 +33,15 @@ BuildRequires:  qt6-qtbase-sql-odbc
 BuildRequires:  qt6-qtbase-sql-postgresql
 BuildRequires:  qt6-qtmultimedia-gstreamer
 BuildRequires:  cmake(KF6ItemViews)
+BuildRequires:  cmake(KF6Archive)
+BuildRequires:  cmake(KF6Config)
+BuildRequires:  cmake(KF6CoreAddons)
+BuildRequires:  cmake(KF6I18n)
+BuildRequires:  cmake(KF6IconThemes)
+BuildRequires:  cmake(KF6KIO)
+BuildRequires:  cmake(KF6Solid)
+BuildRequires:  cmake(KF6XmlGui)
+BuildRequires:  cmake(KF6WidgetsAddons)
 BuildRequires:  pkgconfig(libebur128)
 BuildRequires:	pkgconfig(libmtp)
 BuildRequires:	pkgconfig(libmpg123)
